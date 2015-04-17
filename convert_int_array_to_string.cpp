@@ -13,6 +13,7 @@ string int_array_to_string(int a[], int size)
 
 string int_to_string(int x){
     string st;
+    if(x == 0)return "0";
     while(x > 0){
         int n = x%10;
         st += n + '0';
