@@ -12,11 +12,11 @@ string int_array_to_string(int a[], int size)
 //convert int to string(not using to_string())
 
 string int_to_string(int x){
-    string s;
+    string st;
     while(x > 0){
         int n = x%10;
-        s += n + '0';
+        st += n + '0';
         x = x/10;
     }
-    return s;
+    return st;
 }
