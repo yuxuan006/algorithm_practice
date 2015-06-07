@@ -12,9 +12,6 @@ string int_array_to_string(int a[], int size)
 //convert int to string(not using to_string())
 
 string int_to_string(int x){
-    if (x == 0) {
-        return "0";
-    }
     string st;
     if(x == 0)return "0";
     while(x > 0){
