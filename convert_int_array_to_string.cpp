@@ -23,7 +23,7 @@ string int_to_string(int x){
         x = x/10;
     }
     if (x < 0) {
-        res = "-"+res;
+        st = "-"+st;
     }
     return st;
 }
