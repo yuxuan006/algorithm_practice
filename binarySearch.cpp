@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//recursion
 int binarySearch(int a[], int first, int last, int value){
     int index;
     if(first > last){
@@ -21,6 +21,24 @@ int binarySearch(int a[], int first, int last, int value){
         index = binarySearch(a, mid+1, last, value);
     }
     return index;
+}
+//iteration
+int binarySearch(int nums[], int lower, int upper, int target){
+    int index;
+    int mid;
+    while(lower <= upper){
+        mid = (upper+lower)/2;
+        //cout<<"mid"<<mid;
+        if(nums[mid] == target)
+            return mid;
+        else if(nums[mid] < target){
+            lower = mid + 1;
+        }
+        else if(nums[mid] > target){
+            upper = mid - 1;
+        }
+    }
+    return -1;
 }
 int main()
 {
